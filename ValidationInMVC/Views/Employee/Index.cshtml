@@ -1,0 +1,62 @@
+﻿@model ValidationInMVC.Models.Employee
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Employee Data</h2>
+<table>
+    @using (Html.BeginForm("SubmitData", "Employee", FormMethod.Post))
+    {
+        <tr>
+            <th>Name:</th>
+            <td>
+                @Html.TextBox("Name")
+                <br />
+                @Html.ValidationMessage("Name")
+                <br />
+
+            </td>
+        </tr>
+        <tr>
+            <th>Address:</th>
+            <td>
+                @Html.TextBox("Address")
+                <br />
+                @Html.ValidationMessage("Address")
+                <br />
+
+            </td>
+        </tr>
+        <tr>
+            <th>Designation:</th>
+            <td>
+                @Html.TextBox("Designation")
+                <br />
+                @Html.ValidationMessage("Designation")
+                <br />
+
+            </td>
+        </tr>
+        <tr>
+            <th>Email:</th>
+            <td>
+                @Html.TextBox("Email")
+                <br />
+                @Html.ValidationMessage("Email")
+                <br />
+
+            </td>
+        </tr>
+        <tr>
+            <th>Age:</th>
+            <td>
+                @Html.TextBox("Age")
+                <br />
+                @Html.ValidationMessage("Age")
+                <br />
+                <input type="submit" value="Save" />
+            </td>
+        </tr>
+    }
+</table>
+

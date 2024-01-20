@@ -1,0 +1,65 @@
+﻿@model ValidationInMVC.Models.Student
+@{
+    ViewBag.Title = "Index";
+}
+
+<table>
+    <tr>
+        <th colspan="2"> Student Details</th>
+    </tr>
+    @*@using (Html.BeginForm("SubmitDataUsingLooslyBinding", "Student", FormMethod.Post))  *@
+    @using (Html.BeginForm("SubmitDataUsingStronglyBinding", "Student", FormMethod.Post))
+    {
+        <tr>
+            <th>FullName:</th>
+            <td>
+                @Html.TextBoxFor(x => x.FullName)
+            </td>
+            <td>
+                @Html.ValidationMessageFor(x => x.FullName)
+            </td>
+        </tr>
+        <tr>
+            <th>Address:</th>
+            <td>
+                @Html.TextBoxFor(x => x.Address)
+            </td>
+            <td>
+                @Html.ValidationMessageFor(x => x.Address)
+            </td>
+        </tr>
+        <tr>
+            <th>Email:</th>
+            <td>
+                @Html.TextBoxFor(x => x.Email)
+            </td>
+            <td>
+                @Html.ValidationMessageFor(x => x.Email)
+            </td>
+        </tr>
+        <tr>
+            <th>Mobile:</th>
+            <td>
+                @Html.TextBoxFor(x => x.Mobile)
+            </td>
+            <td>
+                @Html.ValidationMessageFor(x => x.Mobile)
+            </td>
+        </tr>
+        <tr>
+            <th>Age:</th>
+            <td>
+                @Html.TextBoxFor(x => x.Age)
+            </td>
+            <td>
+                @Html.ValidationMessageFor(x => x.Age)
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Save" />
+            </td>
+        </tr>
+    }
+</table>
+
