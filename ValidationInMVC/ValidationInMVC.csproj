@@ -94,6 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Global.asax.cs">
@@ -115,6 +116,7 @@
     <Content Include="Views\Student\SubmitDataUsingStronglyBinding.cshtml" />
     <Content Include="Views\Student\ValidationSummary.cshtml" />
     <Content Include="Views\Student\SubmitDataUsingValidationSummary.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
